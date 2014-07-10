@@ -1,44 +1,109 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+<head>
+    <title>BSS Mobile App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/listview.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/details.css" />
+    <!--        <link rel="stylesheet" href="css/grid.css" />-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/photo.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+</head>
+
+
+
+<body id="myBody">
+
+    <!-- logon page -->
+    <div id="logon" data-role="page">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h1>Login</h1>
+        </div>
+        <div data-role="content">
+            <form id="login">
+                Username:
+                <input type="text" id="userName" value="bssdemo@gmail.com" />Password:
+                <input type="password" id="pwd" value="bssdemo" />
+                <a href="#MainListPage" id="loginBtn" data-role="button">Login</a>
+                <label id="loginerrmsg"></label>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile page -->
+    <div id="profilePage" data-role="page">
+        <div data-role="header" data-position="fixed" id="AppHeader">
+
+            <a href="#MainListPage" data-role="button" data-iconpos="notext" data-icon="back" data-mini="false" data-theme="a" data-shadow="false"></a>
+            <a data-role="button" data-iconpos="notext" id='ab_cart' data-mini="false" data-theme="a" data-shadow="false">5</a>
+            <div id="header-home">
+                <a data-role="button" data-iconpos="notext" id='AppLogo' data-mini="false" data-theme="a" data-shadow="false"></a>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+        <div data-role="content">
+            <form id="profile">
+                First Name:
+                <input type="text" id="firstName" value="Vinod" />Last Name:
+                <input type="text" id="lastName" value="Kumar T." />Email:
+                <input type="text" id="email" value="vinodtiru@gmail.com" />
+                <a id="takePhoto" data-role="button">Take Photo</a>
+                <img id="profileImage" src="" />
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="MainListPage" data-role="page" class="my-page">
+        <div data-role="header" data-position="fixed" id="AppHeader">
+
+            <a data-role="button" data-iconpos="notext" id='ab_menu' data-mini="false" data-theme="a" data-shadow="false"></a>
+            <a data-role="button" data-iconpos="notext" id='ab_cart' data-mini="false" data-theme="a" data-shadow="false">5</a>
+            <div id="header-home">
+                <a data-role="button" data-iconpos="notext" id='AppLogo' data-mini="false" data-theme="a" data-shadow="false"></a>
+            </div>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" id="mainlist" data-filter="true" data-icon="false">
+
+                <!--The main list is loaded here -->
+
+            </ul>
+        </div>
+        <div data-role="footer" data-id="foo1" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a data-icon="home" id="navHome" data-iconpos="top" href="a.html"></a>
+                    </li>
+                    <li>
+                        <a data-icon="star" id="navProfile" data-iconpos="top" href="#profilePage"></a>
+                    </li>
+                    <li>
+                        <a data-icon="info" id="navContactUs" data-iconpos="top" href="a.html"></a>
+                    </li>
+                    <li>
+                        <a data-icon="grid" id="navCategory" data-iconpos="top" href="a.html"></a>
+                    </li>
+                    <li>
+                        <a data-icon="gear" id="navSettings" data-iconpos="top" href="a.html"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+
+</body>
+
 </html>

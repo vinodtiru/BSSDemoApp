@@ -1,0 +1,9 @@
+#loginerrmsg {
+    text-align: center;
+    color: #f51c1c;
+    display: block;
+    width:  100%;
+    position: absolute;
+    left: 0%;
+    right: 100%;
+}

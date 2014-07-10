@@ -1,0 +1,21 @@
+
+#mainlist .listItem {
+    position: relative;
+}
+
+.listImage {
+    width: 100%;
+}
+
+#mainlist li {
+    float: left;
+    width: 45%;
+    margin: 2%;
+}
+
+.sale-text {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+

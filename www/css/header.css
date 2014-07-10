@@ -1,0 +1,38 @@
+#ab_menu {
+    height: 2em;
+    width: 2em;
+    background: transparent url('../img/action_bar_burger_normal.png') no-repeat center center !important;
+    border: none !important;
+}
+#ab_menu:active {
+    background: transparent url('../img/action_bar_burger_pressed.png') no-repeat center center !important;
+}
+#ab_cart {
+    height: 2em;
+    width: 2em;
+    background: transparent url('../img/action_bar_cart_gray_image_normal.png') no-repeat center center !important;
+    border: none !important;
+    text-indent: 0.6em;
+}
+#ab_cart:active {
+    background: transparent url('../img/action_bar_cart_gray_image_pressed.png') no-repeat center center !important;
+}
+#AppLogo {
+    height: 2em;
+    width: 9em;
+    background: transparent url('../img/logo2.png') no-repeat center center !important;
+    margin-bottom: 0 em !important;
+    border: none !important;
+}
+#AppHeader {
+    height: auto;
+}
+#header-home {
+    text-align: center;
+}
+
+
+
+#demo-page {
+    background: #EFFF33;
+}
