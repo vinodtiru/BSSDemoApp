@@ -56,7 +56,7 @@
                 <input type="text" id="lastName" value="Kumar T." />Email:
                 <input type="text" id="email" value="vinodtiru@gmail.com" />
                 <a id="takePhoto" data-role="button">Take Photo</a>
-                <img id="profileImage" src="" />
+                <img style="display:none;margin:5px auto; width:120px; height:120px;" id="smallImage" src="" />
             </form>
         </div>
     </div>
@@ -73,6 +73,7 @@
             </div>
         </div>
         <div data-role="content">
+            <button onclick="window.plugins.socialsharing.share('My message','My Subject',null,'http://www.google.com/')">share!</button>
             <ul data-role="listview" data-inset="true" id="mainlist" data-filter="true" data-icon="false">
 
                 <!--The main list is loaded here -->
