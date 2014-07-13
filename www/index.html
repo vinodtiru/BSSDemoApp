@@ -5,18 +5,10 @@
     <title>BSS Mobile App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/listview.css" />
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/details.css" />
     <!--        <link rel="stylesheet" href="css/grid.css" />-->
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/photo.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    
 </head>
 
 
@@ -39,71 +31,7 @@
         </div>
     </div>
 
-    <!-- Profile page -->
-    <div id="profilePage" data-role="page">
-        <div data-role="header" data-position="fixed" id="AppHeader">
-
-            <a href="#MainListPage" data-role="button" data-iconpos="notext" data-icon="back" data-mini="false" data-theme="a" data-shadow="false"></a>
-            <a data-role="button" data-iconpos="notext" id='ab_cart' data-mini="false" data-theme="a" data-shadow="false">5</a>
-            <div id="header-home">
-                <a data-role="button" data-iconpos="notext" id='AppLogo' data-mini="false" data-theme="a" data-shadow="false"></a>
-            </div>
-        </div>
-        <div data-role="content">
-            <form id="profile">
-                First Name:
-                <input type="text" id="firstName" value="Vinod" />Last Name:
-                <input type="text" id="lastName" value="Kumar T." />Email:
-                <input type="text" id="email" value="vinodtiru@gmail.com" />
-                <a id="takePhoto" data-role="button">Take Photo</a>
-                <img style="display:none;margin:5px auto; width:120px; height:120px;" id="smallImage" src="" />
-            </form>
-        </div>
-    </div>
-
-
-
-    <div id="MainListPage" data-role="page" class="my-page">
-        <div data-role="header" data-position="fixed" id="AppHeader">
-
-            <a data-role="button" data-iconpos="notext" id='ab_menu' data-mini="false" data-theme="a" data-shadow="false"></a>
-            <a data-role="button" data-iconpos="notext" id='ab_cart' data-mini="false" data-theme="a" data-shadow="false">5</a>
-            <div id="header-home">
-                <a data-role="button" data-iconpos="notext" id='AppLogo' data-mini="false" data-theme="a" data-shadow="false"></a>
-            </div>
-        </div>
-        <div data-role="content">
-            <button onclick="window.plugins.socialsharing.share('My message','My Subject',null,'http://www.google.com/')">share!</button>
-            <ul data-role="listview" data-inset="true" id="mainlist" data-filter="true" data-icon="false">
-
-                <!--The main list is loaded here -->
-
-            </ul>
-        </div>
-        <div data-role="footer" data-id="foo1" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li>
-                        <a data-icon="home" id="navHome" data-iconpos="top" href="a.html"></a>
-                    </li>
-                    <li>
-                        <a data-icon="star" id="navProfile" data-iconpos="top" href="#profilePage"></a>
-                    </li>
-                    <li>
-                        <a data-icon="info" id="navContactUs" data-iconpos="top" href="a.html"></a>
-                    </li>
-                    <li>
-                        <a data-icon="grid" id="navCategory" data-iconpos="top" href="a.html"></a>
-                    </li>
-                    <li>
-                        <a data-icon="gear" id="navSettings" data-iconpos="top" href="a.html"></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
-    </div>
+    
 
 </body>
 
